@@ -4,7 +4,7 @@
   "description": "snake game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -14,13 +14,15 @@
     "snake",
     "game"
   ],
-  "author": "Randel Palu <vanderpalu@yandex.com>",
+  "author": "Randel Palu <randel.palu@yandex.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/randelpalu/snake-game/issues"
   },
   "homepage": "https://github.com/randelpalu/snake-game#readme",
   "devDependencies": {
-    "jest": "^26.0.1"
+    "eslint": "^7.1.0",
+    "jest": "^26.0.1",
+    "jshint": "^2.11.1"
   }
 }
