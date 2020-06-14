@@ -1,7 +1,12 @@
 .container {
     width: 800px;
-    height: 600px;
     margin: auto;
     text-align: center;
-    border: 1px solid black;
+}
+
+#game-info {
+    font-family: sans-serif;
+    padding: 5px;
+    background-color: slategray;
+    color: white;
 }
