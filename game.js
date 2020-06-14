@@ -35,7 +35,6 @@ function generateRandomLocation(maxX, maxY) {
     return { x: x, y: y };
 }
 
-// 180 degree change of direction not allowed
 function newDirectionIsValid(oldDirection, newDirection) {
     if (oldDirection === "right" && newDirection === "left") {
         return false;
@@ -90,6 +89,29 @@ function hitWall(head) {
         return false;
     }
 }
+
+function keyListener(event) {
+    if (event.keyCode === 37) {
+        newDirection = "left";
+    } else if (event.keyCode === 38) {
+        newDirection = "up";
+    } else if (event.keyCode === 39) {
+        newDirection = "right";
+    } else if (event.keyCode === 40) {
+        newDirection = "down";
+    } else if (event.keyCode === 32) {
+        if (paused) {
+            paused = false;
+            rAFId = requestAnimationFrame(playGame);
+        } else {
+            paused = true;
+            cancelAnimationFrame(rAFId);
+        }
+    }
+}
+
+window.addEventListener("keydown", keyListener);
+
 
 const WIDTH = 20;
 const HEIGHT = 15;
